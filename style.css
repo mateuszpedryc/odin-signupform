@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+:root {
+    --primary-color: #ADE4E9;
+    --active-color: #00DCF0;
+    --error-color: #EE465B;
+    --back-color: #575757;
+
+    --primary-size: 20px;
+
+    --form-height: 500px;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--primary-size);
+}
+
+/* Background picture */
+
+img {
+    max-width: 500px;
+    max-height: 1380px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.background-picture p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.8em;
+    color: black;
+}
+
+/* Header */
+
+.header-title h1 {
+    font-size: 1.4em;
+    margin: 25px 0;
+}
+
+/* Main container */
+
+.container-main {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    width: 30%;
+    height: var(--form-height);
+    justify-content: center;
+    background-image: linear-gradient(to right, rgba(255,255,255,0), var(--primary-color));
+}
+
+.logo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 3.2em;
+    color: black;
+}
+
+/* ----------- */
+
+.right {
+    display: flex;
+    flex-direction: column;
+    height: calc(var(--form-height) - 4px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    width: 60%;
+    border: 2px solid var(--primary-color);
+    border-radius: 0 40px 40px 0;
+}
+
+/* Form styling */
+
+.form-title h2 {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 0.8em;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+label span {
+    color: var(--error-color);
+}
+
+input {
+    width: 270px;
+    height: 20px;
+    padding: 13px;
+    background: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+}
+
+input::placeholder {
+    color: var(--back-color);
+    font-size: 0.8em;
+}
+
+.error-required {
+    font-size: 0.7em;
+    color: var(--error-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 50px;
+}
+
+.form-element {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.error-required {
+    visibility: hidden;
+}

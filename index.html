@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="background-picture">
+        <img src="images/background.jpg" alt="Hero image">
+        <p>Photo by <a href="https://unsplash.com/@theshubhamdhage">Shubhan Dhage</a> on 
+            <a href="https://unsplash.com/photos/a-close-up-of-a-surfboard-on-a-black-background-q1k_B8DsdU0">Unsplash</a>.</p>
+    </div>
+
+    <div class="header-title">
+        <h1>This is not real online service! You know you need something like this
+            in our life to help you realize your deepest dreams. <br>
+            Sign up <em>now</em> to get started.
+        </h1>
+        <h1>You <em>know</em> you want to.</h1>
+    </div>
+
+    <div class="container-main">
+        <div class="left">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circles-relation" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9.183 6.117a6 6 0 1 0 4.511 3.986" />
+                    <path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" />
+                </svg>
+                <h1>CIRCLES</h1>
+            </div>
+        </div>
+        <div class="right">
+            <!-- Form -->
+                <form action="post">
+                    <!-- Form title -->
+                    <div class="form-title">
+                        <h2>Let's do this!</h2>
+                    </div>
+                    <!-- First form row -->
+                    <div class="form-row">
+                        <div class="form-element">
+                            <label for="first_name">
+                                FIRST NAME
+                                <span>*</span>
+                            </label>
+                            <input type="text" name="first_name" id="first_name" placeholder="Enter your name" required>
+                            <span class="error-required">This field is required.</span>
+                        </div>
+                        <div class="form-element">
+                            <label for="last_name">
+                                LAST NAME
+                                <span>*</span>
+                            </label>
+                            <input type="text" name="last_name" id="last_name" placeholder="Enter your last name" required>
+                            <span class="error-required">This field is required.</span>
+                        </div>
+                    </div>
+                    <!-- Second form row -->
+                    <div class="form-row">
+                        <div class="form-element">
+                            <label for="email">
+                                E-MAIL
+                                <span>*</span>
+                            </label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                            <span class="error-required">This field is required.</span>
+                        </div>
+                        <div class="form-element">
+                            <label for="phone">
+                                PHONE
+                            </label>
+                            <input type="number" name="phone" id="phone" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                    <!-- Third form row -->
+                    <div class="form-row">
+                        <div class="form-element">
+                            <label for="password">
+                                PASSWORD
+                                <span>*</span>
+                            </label>
+                            <input type="password" name="password" id="password" placeholder="Enter password" required>
+                            <span class="error-required">This field is required.</span>
+                        </div>
+                        <div class="form-element">
+                            <label for="password_confirm">
+                                CONFIRM PASSWORD
+                                <span>*</span>
+                            </label>
+                            <input type="password" name="password_confirm" id="password_confirm" placeholder="Confirm password" required>
+                            <span class="error-required">This field is required.</span>
+                        </div>
+                    </div>
+                </form>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>
