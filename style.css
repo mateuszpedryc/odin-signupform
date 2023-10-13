@@ -10,8 +10,7 @@
     --primary-size: 20px;
 
     --form-height: 500px;
-
-
+    --form-height-scaled: 400px;
 }
 
 * {
@@ -28,13 +27,19 @@ body {
 
 /* Background picture */
 
-img {
-    max-width: 500px;
-    max-height: 1380px;
+.background-picture {
     position: absolute;
+    width: 30%;
+    min-width: 400px;
+    z-index: -1;
     bottom: 0px;
     left: 0px;
-    z-index: -1;
+}
+
+img {
+    max-width: 100%;
+    position: relative;
+
 }
 
 .background-picture p {
@@ -45,7 +50,16 @@ img {
     color: black;
 }
 
+.background-picture a {
+    color: black;
+}
+
 /* Header */
+
+.header-title {
+    margin-left: 30%;
+    padding: 20px;
+}
 
 .header-title h1 {
     font-size: 1.4em;
@@ -90,6 +104,7 @@ img {
     width: 60%;
     border: 2px solid var(--primary-color);
     border-radius: 0 40px 40px 0;
+    position: relative;
 }
 
 /* Form styling */
@@ -115,7 +130,7 @@ input {
     padding: 13px;
     background: none;
     border: 2px solid var(--primary-color);
-    border-radius: 15px;
+    border-radius: 40px;
     font-size: 1em;
     font-weight: 400;
     color: white;
@@ -148,4 +163,216 @@ form {
 
 .error-required {
     visibility: hidden;
+}
+
+.button-section {
+    position: absolute;
+    top: calc(var(--form-height) + 30px);
+}
+
+.button-section button {
+    width: 300px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.button-section button:hover {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: white;
+}
+
+.button-subtext {
+    font-size: 0.8em;
+}
+
+.button-subtext a {
+    color: var(--primary-color);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+@media (max-width: 1300px) {
+    .background-picture {
+        min-width: 300px;
+    }
+
+    .logo {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .logo h1 {
+        font-size: 2.5em;
+    }
+
+    .form-row {
+        gap: 20px;
+    }
+
+    .form-element {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+
+    input {
+        width: 200px;
+        padding: 10px;
+    }
+}
+/*
+@media (max-width: 950px) {
+    .background-picture {
+        min-width: 350px
+    }
+
+    .header-title h1 {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+
+    .button-section button {
+        font-size: 1em;
+        width: 220px;
+        height: 50px;
+    }
+
+    .left {
+        height: var(--form-height-scaled);
+    }
+
+    .right {
+        height: calc(var(--form-height-scaled) - 4px);
+    }
+
+    .button-section {
+        top: calc(var(--form-height-scaled) + 20px);
+    }
+
+    .header-title {
+        margin-bottom: 50px;
+    }
+}
+*/
+@media (max-width: 850px) {
+    .background-picture {
+        display: none;
+    }
+
+    .header-title {
+        margin-left: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .header-title h1 {
+        font-size: 1.2em;
+    }
+
+    .container-main {
+        flex-direction: column;
+    }
+
+    .left {
+        height: fit-content;
+        width: 90%;
+        background-image: none;
+        background-color: var(--primary-color);
+        border-radius: 20px 20px 0 0;
+    }
+
+    .logo {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 1.8em;
+    }
+
+    .logo svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .right {
+        width: calc(90% - 4px);
+        height: var(--form-height-scaled);
+        padding: 0;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .form-title h2 {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    .form-element {
+        align-items: center;
+    }
+
+    .button-section {
+        top: calc(var(--form-height-scaled) + 20px);
+    }
+
+    .button-section button {
+        width: 225px;
+        height: 50px;
+        border-radius: 50px;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 570px) {
+    .header-title h1 {
+        font-size: 0.8em;
+        margin: 10px 0;
+    }
+
+    .logo svg {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .right {
+        height: fit-content;
+        padding: 10px 0;
+    }
+
+    .form-title {
+        display: none;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-element {
+        margin-bottom: 5px;
+    }
+
+    .button-section {
+        top: calc(var(--form-height-scaled) + 190px);
+    }
+
+    .button-subtext {
+        margin-bottom: 20px;
+    }
 }
